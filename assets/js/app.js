@@ -25,8 +25,8 @@ const app = {
         {
             name: 'Chạy Về Khóc Với Anh',
             singer: 'Erik',
-            path: './assets/music/ChayVeKhocVoiAnh.mp3',
-            img: './assets/img/ChayVeKhocVoiAnh.jpg'
+            path: './assets/music/chay-ve-khoc-voi-anh.mp3',
+            img: './assets/img/chay-ve-khoc-voi-anh.jpg'
         },
         {
             name: 'Cố Giang Tình',
@@ -43,8 +43,8 @@ const app = {
         {
             name: 'Dạ Vũ',
             singer: 'Tăng Duy Tân',
-            path: './assets/music/DaVu.mp3',
-            img: './assets/img/DaVu.jpg'
+            path: './assets/music/da-vu.mp3',
+            img: './assets/img/da-vu.jpg'
         },
         {
             name: 'Em Là Nhất Miền Tây',
@@ -55,8 +55,8 @@ const app = {
         {
             name: 'Hồng Trần Tình Ca',
             singer: 'Cao An, Hắc Áp Tử',
-            path: './assets/music/HongTranTinhCa.mp3',
-            img: './assets/img/HongTranTinhCa.jpg'
+            path: './assets/music/hong-tran-tinh-ca.mp3',
+            img: './assets/img/hong-tran-tinh-ca.jpg'
         },
         {
             name: 'Mlem Yêu Anh',
@@ -73,8 +73,8 @@ const app = {
         {
             name: 'Nhớ Người Hay Nhớ',
             singer: 'Sofia x Khói x Châu Đăng Khoa',
-            path: './assets/music/NhoNguoiHayNho.mp3',
-            img: './assets/img/NhoNguoiHayNho.jpg'
+            path: './assets/music/nho-nguoi-hay-nho.mp3',
+            img: './assets/img/nho-nguoi-hay-nho.jpg'
         },
     ],
     render: function() {
