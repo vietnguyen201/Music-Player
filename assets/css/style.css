@@ -93,12 +93,12 @@
     color: #000000;
     padding: 18px;
     font-size: 18px;
-    transition: 3s;
+    transition: 1s;
 
   }
   
   .control .btn.active {
-    color: var(--primary-color);
+    color: #fff;
   }
   
   .control .btn-toggle-play {
@@ -121,8 +121,8 @@
   .control .icon-back:hover, .control .icon-random:hover{
     color:  rgba(255, 255, 255, 0.8);
     cursor: pointer;
-    animation: fadeIn 0.5s ease-in-out;
-    transition: 0.3s;
+    /* animation: fadeIn 0.5s ease-in-out; */
+    transition: 0.5s;
   }
 
   @keyframes fadeIn {
