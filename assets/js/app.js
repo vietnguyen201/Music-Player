@@ -13,14 +13,14 @@ const btnPrev = $('.btn-prev');
 const btnRandom = $('.btn-random');
 const btnRepeat = $('.btn-repeat');
 const song = $('.song');
-
+const labelCurrentTime = $('.current-time');
+const labelDurationTime = $('.duration-time');
 
 const app = {
     currentIndex: 0,
     isPlaying: false,
     isRandom: false,
     isRepeat: false,
-    isStarted: false,
     songs: [
         {
             name: 'Chạy Về Khóc Với Anh',
@@ -154,11 +154,14 @@ const app = {
 
         // Khi tiến độ bài hát thay đổi
         audio.ontimeupdate = function () {
-            if(_this.isStarted) {
+            if(audio.duration) {
             const currentTime = audio.currentTime;
             const duration = audio.duration;
             const percent = Math.floor(currentTime / duration * 100);
-            progress.value = percent;    
+            progress.value = percent;
+                    //Xử lí Song time
+            labelCurrentTime.textContent = _this.formatTime(currentTime);
+            labelDurationTime.textContent = _this.formatTime(duration);        
             }
         }
         // Xử lí khi tua song
@@ -177,7 +180,7 @@ const app = {
             if (_this.isRepeat) {
                 _this.isRepeat =!_this.isRepeat;
                 btnRepeat.classList.remove('active');
-            }  
+            }
             _this.activeSong();
             _this.scrollIntoView();
             audio.play();
@@ -232,8 +235,7 @@ const app = {
                     _this.activeSong();
                 }
             }
-        }
-                
+        }       
     
     },
     loadCurrentSong: function() {
@@ -281,8 +283,10 @@ const app = {
         this.currentIndex = newIndex;
         this.loadCurrentSong();
     },
-    repeatSong: function() {
-
+    formatTime: function(time) {
+        const minutes = Math.floor(time / 60);
+        const seconds = Math.floor(time % 60);
+        return `${minutes}:${seconds < 10? '0' : ''}${seconds}`;
     },
     start: function() {
         this.defineProperties();
