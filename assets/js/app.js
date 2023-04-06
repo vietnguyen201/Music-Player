@@ -23,6 +23,66 @@ const app = {
     isRepeat: false,
     songs: [
         {
+            name: 'Bụi Hoa Giấy',
+            singer: 'Trang',
+            path: './assets/music/bui-hoa-giay.mp3',
+            img: './assets/img/bui-hoa-giay.jpg'
+        },
+        {
+            name: 'Tầng Thượng 102',
+            singer: 'Cá Hồi Hoang',
+            path: './assets/music/tang-thuong-102.mp3',
+            img: './assets/img/tang-thuong-102.jpg'
+        },
+        {
+            name: 'Datmaniac',
+            singer: 'Ngày Nào ft. Cá Hồi Hoang',
+            path: './assets/music/datmaniac.mp3',
+            img: './assets/img/datmaniac.jpg'
+        },
+        {
+            name: 'Bài Hát Của Em',
+            singer: 'Uyen Linh Tran',
+            path: './assets/music/bai-hat-cua-em.mp3',
+            img: './assets/img/bai-hat-cua-em.jpg'
+        },
+        {
+            name: 'She Said',
+            singer: 'WEAN ft. NAOMI',
+            path: './assets/music/she-said.mp3',
+            img: './assets/img/she-said.jpg'
+        },
+        {
+            name: 'Vết Mưa',
+            singer: 'Vũ Cát Tường',
+            path: './assets/music/vet-mua.mp3',
+            img: './assets/img/vet-mua.jpg'
+        },
+        {
+            name: 'Yêu Xa',
+            singer: 'Vũ Cát Tường',
+            path: './assets/music/yeu-xa.mp3',
+            img: './assets/img/yeu-xa.jpg'
+        },
+        {
+            name: 'Bước Qua Mùa Cô Đơn',
+            singer: 'Vũ',
+            path: './assets/music/buoc-qua-mua-co-don.mp3',
+            img: './assets/img/buoc-qua-mua-co-don.jpg'
+        },
+        {
+            name: 'Bước Qua Nhau',
+            singer: 'Vũ',
+            path: './assets/music/buoc-qua-nhau.mp3',
+            img: './assets/img/buoc-qua-nhau.jpg'
+        },
+        {
+            name: '20 Năm Ở Thế Giới',
+            singer: 'Thịnh Suy',
+            path: './assets/music/20-nam-o-the-gioi.mp3',
+            img: './assets/img/20-nam-o-the-gioi.jpg'
+        },
+        {
             name: 'Chạy Về Khóc Với Anh',
             singer: 'Erik',
             path: './assets/music/chay-ve-khoc-voi-anh.mp3',
@@ -140,7 +200,6 @@ const app = {
         // Xử lí khi song được play
         audio.onplay = function () {
             _this.isPlaying = true;
-            _this.isStarted = true;
             player.classList.add('playing');
             cdThumbAnimation.play();
         }
