@@ -22,8 +22,8 @@
   
   .player {
     position: relative;
-    max-width: 480px;
-    margin: 0 auto;
+    max-width: 450px;
+    margin: 10px auto;
   }
   
   .player .icon-pause {
@@ -41,7 +41,7 @@
   .dashboard {
     padding: 16px 16px 14px;
     background-color: rgba(255, 255, 255, 0.3);
-    position: fixed;
+    position: relative;
     border-radius: 15px;
     top: 0;
     width: 100%;
@@ -69,7 +69,7 @@
   .cd {
     display: flex;
     margin: auto;
-    width: 200px;
+    width: 180px;
   }
   
   .cd-thumb {
@@ -86,7 +86,6 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 18px 0 8px 0;
   }
   
   .control .btn {
@@ -172,10 +171,10 @@
   
   /* PLAYLIST */
   .playlist {
-    margin-top: 430px;
+    margin-top: 4px;
     padding: 12px;
     overflow-y: scroll;
-    max-height: 500px;
+    max-height: 335px;
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 15px;
     
