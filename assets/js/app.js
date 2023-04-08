@@ -15,12 +15,14 @@ const btnRepeat = $('.btn-repeat');
 const song = $('.song');
 const labelCurrentTime = $('.current-time');
 const labelDurationTime = $('.duration-time');
-
+const volume = $('#volume');
+const btnVolume = $('.btn-volume');
 const app = {
     currentIndex: 0,
     isPlaying: false,
     isRandom: false,
     isRepeat: false,
+    isMute: false,
     songs: [
         {
             name: 'Bụi Hoa Giấy',
@@ -218,7 +220,8 @@ const app = {
             const duration = audio.duration;
             const percent = Math.floor(currentTime / duration * 100);
             progress.value = percent;
-                    //Xử lí Song time
+
+                //Xử lí Song time
             labelCurrentTime.textContent = _this.formatTime(currentTime);
             labelDurationTime.textContent = _this.formatTime(duration);        
             }
@@ -227,6 +230,25 @@ const app = {
         progress.oninput = function(e) {
             const seekTime = audio.duration / 100 * e.target.value;
             audio.currentTime = seekTime;
+        }
+
+        //Xử lí khi thay đổi volumn
+        volume.oninput = function(e) {
+            const volumnNow = e.target.value / 100;
+            audio.volume = volumnNow;
+            if(audio.volume !=0) {
+                btnVolume.classList.remove('mute')
+            }else {
+                btnVolume.classList.add('mute')
+            }
+        }
+
+        //Xử lí khi icon volume click
+        btnVolume.onclick = function() {
+            _this.isMute = !_this.isMute;
+            btnVolume.classList.toggle('mute', _this.isMute);
+            volume.value = _this.isMute ? 0 : 50;
+            audio.volume = _this.isMute ? 0 : 0.5;
         }
         
         //Khi next song được click
